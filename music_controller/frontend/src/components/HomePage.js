@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import RoomJoinPage from "./RoomJoinPage";
 import CreateRoomPage from "./CreateRoomPage";
+
 import { BrowserRouter as Router , Switch, Route, Link, Redirect } from "react-router-dom";
 import Room from "./Room";
 import { Button, Grid, Typography, ButtonGroup } from "@material-ui/core";
@@ -12,6 +13,7 @@ export default class HomePage extends Component {
         this.state = {
             roomCode: null,
         };
+        this.clearRoomCode = this.clearRoomCode.bind(this)
     }
 
     async componentDidMount() {
@@ -44,6 +46,12 @@ export default class HomePage extends Component {
                 </Grid>
             </Grid>
         );
+    }
+
+    clearRoomCode() {
+        this.setState({
+            roomCode: null,
+        });
     }
 
 

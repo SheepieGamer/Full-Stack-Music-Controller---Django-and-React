@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import HomePage from "./HomePage";
 import RoomJoinPage from "./RoomJoinPage";
 import CreateRoomPage from "./CreateRoomPage";
+import EditRoomPage  from "./EditRoomPage";
 
 export default class App extends Component {
     constructor(props) {
