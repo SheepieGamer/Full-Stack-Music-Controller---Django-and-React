@@ -5,7 +5,13 @@ import sys
 
 
 def main():
-    """Run administrative tasks."""
+    """
+    Runs administrative tasks.
+
+    This function sets the DJANGO_SETTINGS_MODULE environment variable to
+    music_controller.settings, imports the django.core.management module, and
+    then calls the execute_from_command_line function with the sys.argv list.
+    """
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'music_controller.settings')
     try:
         from django.core.management import execute_from_command_line

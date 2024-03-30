@@ -3,7 +3,13 @@ from string import ascii_uppercase
 from random import choices
 
 
-def generate_unique_code():
+def generate_unique_code() -> str:
+    """
+    Generate a unique code for a new room.
+
+    Returns:
+        str: The unique code for the new room.
+    """
     length: int = 6
     while True:
         code = ''.join(choices(ascii_uppercase, k=length))
